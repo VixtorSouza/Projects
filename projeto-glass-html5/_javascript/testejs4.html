@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampada!</title>
+    <style>
+        div#quebra {
+            position: absolute;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            left: 200px;
+            top: 150px;
+            font-size: 20pt;
+
+        
+        }
+        h1 {
+            text-decoration: underline;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Acenda a lampada</h1>
+    <div id="quebra"></div>
+    <img id="luzes" src="/_imagens/lampada-apagada.jpg" onclick="mudaLampada('lampada-quebrada.jpg')" onmousemove="mudaLampada('lampada-acesa.jpg')" onmouseout="mudaLampada('lampada-apagada.jpg')">
+    <script>
+       var quebrada = false
+        var quebra = document.getElementById('quebra')
+        function mudaLampada(tipo) {
+            
+            if (!quebrada) {
+                document.getElementById('luzes').src = '/_imagens/' + tipo 
+                if (tipo == 'lampada-quebrada.jpg') {
+               
+                    quebrada = true
+                    quebra.innerHTML = 'Quebrou ;-;'
+                }
+                
+            }
+            }
+            
+          
+    
+      
+
+        
+     
+        
+
+    </script>
+</body>
+</html>

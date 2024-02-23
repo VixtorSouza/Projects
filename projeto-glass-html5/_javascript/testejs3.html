@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampada!</title>
+</head>
+<body>
+    <h1>Acenda a lampada</h1>
+    <img id="luzes" src="/_imagens/lampada-apagada.jpg" >
+    <script>
+        var luzes = document.getElementById('luzes')
+        luzes.addEventListener('click', quebrar)
+        luzes.addEventListener('mouseenter', acender)
+        luzes.addEventListener('mouseout', apagar)
+        
+        function quebrar() {
+            luzes.src = '/_imagens/lampada-quebrada.jpg'
+        }
+        function acender() {
+            luzes.src = '/_imagens/lampada-acesa.jpg'
+
+        }
+        function apagar() {
+            luzes.src = '/_imagens/lampada-apagada.jpg'
+        }
+
+    </script>
+</body>
+</html>
